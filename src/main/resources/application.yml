@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.xml
+    url: jdbc:postgresql://localhost:5432/account_balance_db
+    user: postgres
+    password: admin
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/account_balance_db
+    username: postgres
+    password: admin
+
+  main:
+    allow-bean-definition-overriding: true
